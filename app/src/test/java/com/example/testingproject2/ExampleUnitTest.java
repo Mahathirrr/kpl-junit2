@@ -1,93 +1,87 @@
 package com.example.testingproject2;
-
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 /**
- * Local Unit Tests for Calculator class
+ * Pengujian Unit Lokal untuk kelas Calculator
  *
- * Test Cases:
+ * Kasus Pengujian:
  * 1. testAddition
- *    - Tests the add() method of Calculator
- *    - Verifies that 2 + 2 equals 4
- *    - Basic arithmetic operation validation
+ *    - Menguji metode add() dari Calculator
+ *    - Memverifikasi bahwa 2 + 2 sama dengan 4
+ *    - Validasi operasi aritmatika dasar
  *
  * 2. testSubtraction
- *    - Tests the subtract() method of Calculator
- *    - Verifies that 5 - 3 equals 2
- *    - Basic arithmetic operation validation
+ *    - Menguji metode subtract() dari Calculator
+ *    - Memverifikasi bahwa 5 - 3 sama dengan 2
+ *    - Validasi operasi aritmatika dasar
  *
  * 3. testPasswordValidation_Empty
- *    - Tests password validation with empty input
- *    - Verifies that empty password returns error message
- *    - Input validation testing
+ *    - Menguji validasi kata sandi dengan input kosong
+ *    - Memverifikasi bahwa kata sandi kosong mengembalikan pesan kesalahan
+ *    - Pengujian validasi input
  *
  * 4. testPasswordValidation_TooShort
- *    - Tests password validation with short password
- *    - Verifies that password less than 6 characters returns error message
- *    - Boundary testing for password length
+ *    - Menguji validasi kata sandi dengan kata sandi yang terlalu pendek
+ *    - Memverifikasi bahwa kata sandi kurang dari 6 karakter mengembalikan pesan kesalahan
+ *    - Pengujian batas untuk panjang kata sandi
  */
 public class ExampleUnitTest {
     private Calculator calculator = new Calculator();
-
     /**
-     * Test case for addition operation
+     * Kasus pengujian untuk operasi penambahan
      *
-     * Purpose:
-     * - Validates that the add() method correctly performs addition
-     * - Tests with simple positive integers (2 + 2)
+     * Tujuan:
+     * - Memvalidasi bahwa metode add() dengan benar melakukan penambahan
+     * - Menguji dengan bilangan bulat positif sederhana (2 + 2)
      *
-     * Expected Result:
-     * - Should return 4 when adding 2 and 2
-     * - Verifies basic arithmetic functionality
+     * Hasil yang Diharapkan:
+     * - Harus mengembalikan 4 ketika menambahkan 2 dan 2
+     * - Memverifikasi fungsionalitas aritmatika dasar
      */
     @Test
     public void testAddition() {
         assertEquals(4, calculator.add(2, 2));
     }
-
     /**
-     * Test case for subtraction operation
+     * Kasus pengujian untuk operasi pengurangan
      *
-     * Purpose:
-     * - Validates that the subtract() method correctly performs subtraction
-     * - Tests with simple positive integers (5 - 3)
+     * Tujuan:
+     * - Memvalidasi bahwa metode subtract() dengan benar melakukan pengurangan
+     * - Menguji dengan bilangan bulat positif sederhana (5 - 3)
      *
-     * Expected Result:
-     * - Should return 2 when subtracting 3 from 5
-     * - Verifies basic arithmetic functionality
+     * Hasil yang Diharapkan:
+     * - Harus mengembalikan 2 ketika mengurangkan 3 dari 5
+     * - Memverifikasi fungsionalitas aritmatika dasar
      */
     @Test
     public void testSubtraction() {
         assertEquals(2, calculator.subtract(5, 3));
     }
-
     /**
-     * Test case for password validation with empty input
+     * Kasus pengujian untuk validasi kata sandi dengan input kosong
      *
-     * Purpose:
-     * - Validates the behavior when an empty password is provided
-     * - Tests edge case of empty string input
+     * Tujuan:
+     * - Memvalidasi perilaku ketika kata sandi kosong diberikan
+     * - Menguji kasus batas dari input string kosong
      *
-     * Expected Result:
-     * - Should return "Password cannot be empty" error message
-     * - Ensures proper handling of empty input
+     * Hasil yang Diharapkan:
+     * - Harus mengembalikan pesan kesalahan "Password cannot be empty"
+     * - Memastikan penanganan yang tepat untuk input kosong
      */
     @Test
     public void testPasswordValidation_Empty() {
         assertEquals("Password cannot be empty", calculator.validatePassword(""));
     }
-
     /**
-     * Test case for password validation with short password
+     * Kasus pengujian untuk validasi kata sandi dengan kata sandi pendek
      *
-     * Purpose:
-     * - Validates the minimum length requirement for passwords
-     * - Tests boundary condition with a 5-character password
+     * Tujuan:
+     * - Memvalidasi persyaratan panjang minimum untuk kata sandi
+     * - Menguji kondisi batas dengan kata sandi 5 karakter
      *
-     * Expected Result:
-     * - Should return "Password must be at least 6 characters" error message
-     * - Ensures proper length validation
+     * Hasil yang Diharapkan:
+     * - Harus mengembalikan pesan kesalahan "Password must be at least 6 characters"
+     * - Memastikan validasi panjang yang tepat
      */
     @Test
     public void testPasswordValidation_TooShort() {

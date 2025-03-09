@@ -19,41 +19,41 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.*;
 
 /**
- * Instrumented Tests for MainActivity
+ * Pengujian Instrumen untuk MainActivity
  *
- * Test Cases:
+ * Kasus Pengujian:
  * 1. useAppContext
- *    - Verifies the package name of the app context
- *    - Basic context validation
+ *    - Memverifikasi nama paket dari konteks aplikasi
+ *    - Validasi konteks dasar
  *
  * 2. testPasswordValidation_UI_Empty
- *    - Tests password validation through UI with empty input
- *    - Verifies that clicking validate with empty field shows error message
- *    - UI interaction and validation testing
+ *    - Menguji validasi kata sandi melalui UI dengan input kosong
+ *    - Memverifikasi bahwa mengklik validasi dengan kolom kosong menampilkan pesan kesalahan
+ *    - Pengujian interaksi dan validasi UI
  *
  * 3. testPasswordValidation_UI_TooShort
- *    - Tests password validation through UI with short password
- *    - Verifies that entering short password shows error message
- *    - UI interaction and validation testing
+ *    - Menguji validasi kata sandi melalui UI dengan kata sandi pendek
+ *    - Memverifikasi bahwa memasukkan kata sandi pendek menampilkan pesan kesalahan
+ *    - Pengujian interaksi dan validasi UI
  *
  * 4. testPasswordValidation_UI_Valid
- *    - Tests password validation through UI with valid password
- *    - Verifies that entering valid password shows success message
- *    - UI interaction and validation testing
+ *    - Menguji validasi kata sandi melalui UI dengan kata sandi valid
+ *    - Memverifikasi bahwa memasukkan kata sandi valid menampilkan pesan sukses
+ *    - Pengujian interaksi dan validasi UI
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
 
     /**
-     * Test case to verify application context
+     * Kasus pengujian untuk memverifikasi konteks aplikasi
      *
-     * Purpose:
-     * - Validates that the application context is correctly set up
-     * - Verifies the package name matches the expected value
+     * Tujuan:
+     * - Memvalidasi bahwa konteks aplikasi diatur dengan benar
+     * - Memverifikasi nama paket sesuai dengan nilai yang diharapkan
      *
-     * Expected Result:
-     * - Package name should match "com.example.testingproject2"
-     * - Ensures proper app configuration
+     * Hasil yang Diharapkan:
+     * - Nama paket harus sesuai dengan "com.example.testingproject2"
+     * - Memastikan konfigurasi aplikasi yang tepat
      */
     @Test
     public void useAppContext() {
@@ -62,20 +62,20 @@ public class ExampleInstrumentedTest {
     }
 
     /**
-     * Test case for UI password validation with empty input
+     * Kasus pengujian untuk validasi kata sandi UI dengan input kosong
      *
-     * Purpose:
-     * - Tests the UI behavior when validate button is clicked without entering password
-     * - Validates error message display for empty input
+     * Tujuan:
+     * - Menguji perilaku UI ketika tombol validasi diklik tanpa memasukkan kata sandi
+     * - Memvalidasi tampilan pesan kesalahan untuk input kosong
      *
-     * Steps:
-     * 1. Launch MainActivity
-     * 2. Click validate button without entering password
-     * 3. Verify error message
+     * Langkah-langkah:
+     * 1. Meluncurkan MainActivity
+     * 2. Mengklik tombol validasi tanpa memasukkan kata sandi
+     * 3. Memverifikasi pesan kesalahan
      *
-     * Expected Result:
-     * - Should display "Password cannot be empty" message
-     * - Validates proper UI feedback for empty input
+     * Hasil yang Diharapkan:
+     * - Harus menampilkan pesan "Password cannot be empty"
+     * - Memvalidasi umpan balik UI yang tepat untuk input kosong
      */
     @Test
     public void testPasswordValidation_UI_Empty() {
@@ -85,21 +85,21 @@ public class ExampleInstrumentedTest {
     }
 
     /**
-     * Test case for UI password validation with short password
+     * Kasus pengujian untuk validasi kata sandi UI dengan kata sandi pendek
      *
-     * Purpose:
-     * - Tests the UI behavior when a password shorter than 6 characters is entered
-     * - Validates error message display for insufficient length
+     * Tujuan:
+     * - Menguji perilaku UI ketika kata sandi kurang dari 6 karakter dimasukkan
+     * - Memvalidasi tampilan pesan kesalahan untuk panjang yang tidak mencukupi
      *
-     * Steps:
-     * 1. Launch MainActivity
-     * 2. Enter 5-character password
-     * 3. Click validate button
-     * 4. Verify error message
+     * Langkah-langkah:
+     * 1. Meluncurkan MainActivity
+     * 2. Memasukkan kata sandi 5 karakter
+     * 3. Mengklik tombol validasi
+     * 4. Memverifikasi pesan kesalahan
      *
-     * Expected Result:
-     * - Should display "Password must be at least 6 characters" message
-     * - Validates proper UI feedback for short passwords
+     * Hasil yang Diharapkan:
+     * - Harus menampilkan pesan "Password must be at least 6 characters"
+     * - Memvalidasi umpan balik UI yang tepat untuk kata sandi pendek
      */
     @Test
     public void testPasswordValidation_UI_TooShort() {
@@ -110,21 +110,21 @@ public class ExampleInstrumentedTest {
     }
 
     /**
-     * Test case for UI password validation with valid password
+     * Kasus pengujian untuk validasi kata sandi UI dengan kata sandi valid
      *
-     * Purpose:
-     * - Tests the UI behavior when a valid password is entered
-     * - Validates success message display
+     * Tujuan:
+     * - Menguji perilaku UI ketika kata sandi valid dimasukkan
+     * - Memvalidasi tampilan pesan sukses
      *
-     * Steps:
-     * 1. Launch MainActivity
-     * 2. Enter 6-character password
-     * 3. Click validate button
-     * 4. Verify success message
+     * Langkah-langkah:
+     * 1. Meluncurkan MainActivity
+     * 2. Memasukkan kata sandi 6 karakter
+     * 3. Mengklik tombol validasi
+     * 4. Memverifikasi pesan sukses
      *
-     * Expected Result:
-     * - Should display "Valid password" message
-     * - Validates proper UI feedback for valid passwords
+     * Hasil yang Diharapkan:
+     * - Harus menampilkan pesan "Valid password"
+     * - Memvalidasi umpan balik UI yang tepat untuk kata sandi valid
      */
     @Test
     public void testPasswordValidation_UI_Valid() {
