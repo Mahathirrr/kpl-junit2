@@ -30,21 +30,65 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     private Calculator calculator = new Calculator();
 
+    /**
+     * Test case for addition operation
+     *
+     * Purpose:
+     * - Validates that the add() method correctly performs addition
+     * - Tests with simple positive integers (2 + 2)
+     *
+     * Expected Result:
+     * - Should return 4 when adding 2 and 2
+     * - Verifies basic arithmetic functionality
+     */
     @Test
     public void testAddition() {
         assertEquals(4, calculator.add(2, 2));
     }
 
+    /**
+     * Test case for subtraction operation
+     *
+     * Purpose:
+     * - Validates that the subtract() method correctly performs subtraction
+     * - Tests with simple positive integers (5 - 3)
+     *
+     * Expected Result:
+     * - Should return 2 when subtracting 3 from 5
+     * - Verifies basic arithmetic functionality
+     */
     @Test
     public void testSubtraction() {
         assertEquals(2, calculator.subtract(5, 3));
     }
 
+    /**
+     * Test case for password validation with empty input
+     *
+     * Purpose:
+     * - Validates the behavior when an empty password is provided
+     * - Tests edge case of empty string input
+     *
+     * Expected Result:
+     * - Should return "Password cannot be empty" error message
+     * - Ensures proper handling of empty input
+     */
     @Test
     public void testPasswordValidation_Empty() {
         assertEquals("Password cannot be empty", calculator.validatePassword(""));
     }
 
+    /**
+     * Test case for password validation with short password
+     *
+     * Purpose:
+     * - Validates the minimum length requirement for passwords
+     * - Tests boundary condition with a 5-character password
+     *
+     * Expected Result:
+     * - Should return "Password must be at least 6 characters" error message
+     * - Ensures proper length validation
+     */
     @Test
     public void testPasswordValidation_TooShort() {
         assertEquals("Password must be at least 6 characters", calculator.validatePassword("12345"));
